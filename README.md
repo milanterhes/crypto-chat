@@ -18,7 +18,7 @@
 
 
 ## Todos
-- [ ] Setup Bootstrap and scss
+- [x] Setup Bootstrap and scss
 - [ ] Create UI components
   - [ ] Chat Room
   - [ ] Chat Message
