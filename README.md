@@ -19,10 +19,10 @@
 
 ## Todos
 - [x] Setup Bootstrap and scss
-- [ ] Create UI components
-  - [ ] Chat Room
-  - [ ] Chat Message
-  - [ ] Input
+- [x] Create UI components
+  - [x] Chat Room
+  - [x] Chat Message
+  - [x] Input
   - [ ] Login?
 - [ ] Setup blockchain integration libraries
 - [ ] Setup login

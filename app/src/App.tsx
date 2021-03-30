@@ -1,12 +1,15 @@
-import Alert from 'react-bootstrap/Alert'
+import { Fragment } from 'react'
+import NavBar from "./components/NavBar"
+import ChatRoom from "./components/chat/ChatRoom"
+import "./theme/position.scss"
+
 function App() {
+
   return (
-    <div>
-      <Alert variant='primary'>
-        This is a primary alert—check it out!
-      </Alert>
-      <p className="my-color">Testing red text</p>
-    </div>
+    <Fragment>
+      <NavBar />
+      <ChatRoom />
+    </Fragment>
   );
 }
 
