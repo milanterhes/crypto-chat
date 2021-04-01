@@ -9,8 +9,9 @@ interface MessageListProps {
 const MessageList: FC<MessageListProps> = ({ messages }) => {
     return (
         <Fragment>
-            {messages.map(msg => (
-                <ChatMessage {...msg} />
+            {messages.map((msg, idx) => (
+                //TODO: Get better key
+                <ChatMessage {...msg} key={idx} />
             ))}
         </Fragment>
     )

@@ -1,5 +1,13 @@
 // Override default variables before the import
 $body-bg: #14192e;
+$wax-orange: #F89022;
 
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
+
+@debug map-set($theme-colors, "wax-orange", $wax-orange);
+
+.btn-wax-orange {
+    @include button-variant($wax-orange, #222222, $wax-orange, $wax-orange, $wax-orange, $wax-orange);
+    color: white;
+}

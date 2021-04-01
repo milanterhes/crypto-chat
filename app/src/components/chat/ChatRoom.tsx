@@ -1,8 +1,10 @@
 import Container from "react-bootstrap/Container"
 import "./ChatRoom.scss"
-import { FC } from "react"
+import { FC, useContext } from "react"
 import MessageList from "./MessageList"
 import InputBar from "./InputBar"
+import { UAL } from "../../types/ual"
+import { UALContext } from "ual-reactjs-renderer"
 
 const testMessages = [
     {
@@ -19,12 +21,14 @@ const testMessages = [
 
 const ChatRoom: FC = () => {
 
+    const v: UAL = useContext(UALContext);
+
     return (
         <Container
             className="chatroom-container rounded pt-3 text-white p-2"
         >
-            <MessageList messages={[...testMessages]} />
-            <InputBar />
+            <MessageList messages={[...testMessages, ...testMessages, ...testMessages, ...testMessages, ...testMessages]} />
+            {v.activeUser && <InputBar />}
         </Container>
     )
 }

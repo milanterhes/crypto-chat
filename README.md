@@ -23,9 +23,9 @@
   - [x] Chat Room
   - [x] Chat Message
   - [x] Input
-  - [ ] Login?
-- [ ] Setup blockchain integration libraries
-- [ ] Setup login
+  - [x] Login?
+- [x] Setup blockchain integration libraries
+- [x] Setup login
 - [ ] Setup message fetching
   - [ ] Fetch on page open (X number of most recent)
   - [ ] Load more when scrolling up
