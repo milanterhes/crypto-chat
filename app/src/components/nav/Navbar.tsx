@@ -8,7 +8,7 @@ import { FC, Fragment } from "react"
 interface NavbarProps {
     isLoggedIn: Boolean;
     showModal: () => void;
-    userName?: String;
+    userName: string | null;
     logout: () => void;
 }
 

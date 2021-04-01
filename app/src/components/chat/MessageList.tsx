@@ -1,4 +1,4 @@
-import { FC, Fragment } from "react"
+import { FC } from "react"
 import Message from "../../types/message"
 import ChatMessage from "./ChatMessage"
 
@@ -9,11 +9,11 @@ interface MessageListProps {
 
 const MessageList: FC<MessageListProps> = ({ messages, userName }) => {
     return (
-        <Fragment>
+        <div className="d-flex flex-column-reverse">
             {messages.map(msg => (
                 <ChatMessage {...msg} key={msg.message_id} userName={userName} />
             ))}
-        </Fragment>
+        </div>
     )
 }
 export default MessageList

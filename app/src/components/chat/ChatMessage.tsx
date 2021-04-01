@@ -12,7 +12,7 @@ const ChatMessage: FC<ChatMessageProps> = ({ message, sender, message_id, userNa
 
     const isOwnMessage = userName === sender
 
-    const senderString = isOwnMessage ? <span className="text-success">You</span> : sender
+    const senderString = isOwnMessage ? <span className="text-success">Me</span> : sender
 
     return (
         <div className={`d-flex flex-column chatmessage-container ${isOwnMessage && "ml-auto"}`}>
