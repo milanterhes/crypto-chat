@@ -1,7 +1,7 @@
 interface Message {
     message: string;
     sender: string;
-    date: Date;
+    message_id: number;
 }
 
 export default Message

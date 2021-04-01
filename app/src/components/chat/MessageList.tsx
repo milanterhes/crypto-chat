@@ -4,14 +4,14 @@ import ChatMessage from "./ChatMessage"
 
 interface MessageListProps {
     messages: Message[]
+    userName: string | null;
 }
 
-const MessageList: FC<MessageListProps> = ({ messages }) => {
+const MessageList: FC<MessageListProps> = ({ messages, userName }) => {
     return (
         <Fragment>
-            {messages.map((msg, idx) => (
-                //TODO: Get better key
-                <ChatMessage {...msg} key={idx} />
+            {messages.map(msg => (
+                <ChatMessage {...msg} key={msg.message_id} userName={userName} />
             ))}
         </Fragment>
     )

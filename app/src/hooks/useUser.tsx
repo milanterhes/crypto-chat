@@ -3,7 +3,7 @@ import { UALContext } from "ual-reactjs-renderer"
 import { UAL } from '../types/ual'
 
 const useUser = () => {
-    const [userName, setName] = useState()
+    const [userName, setName] = useState<string | null>(null)
     const ual = useContext<UAL>(UALContext)
 
     if (ual === undefined) {

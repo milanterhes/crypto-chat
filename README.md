@@ -27,7 +27,8 @@
 - [x] Setup blockchain integration libraries
 - [x] Setup login
 - [ ] Setup message fetching
-  - [ ] Fetch on page open (X number of most recent)
+  - [x] Fetch on page open (X number of most recent)
+  - [x] Fetch messages every few seconds
   - [ ] Load more when scrolling up
 - [ ] Setup message sending
 - [ ] Setup message editing

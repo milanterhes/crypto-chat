@@ -5,7 +5,6 @@ import Button from "react-bootstrap/Button"
 const InputBar: FC = () => {
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log("s")
     }
     return (
         <Form inline onSubmit={handleSubmit} className="bottom-0 pt-1 pb-1 position-sticky">
