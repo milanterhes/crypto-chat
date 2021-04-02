@@ -8,6 +8,7 @@ import Message from "../../types/message"
 import useUser from "../../hooks/useUser"
 import { sendMessage } from "../../transactions/sendMessage"
 import ErrorToast from "../common/ErrorToast"
+import PullToRefresh from 'react-simple-pull-to-refresh';
 
 interface ChatRoomProps {
     messages: Message[];
@@ -36,8 +37,9 @@ const ChatRoom: FC<ChatRoomProps> = ({ messages, hasMore, increaseLimit, chatroo
         <Container
             className="chatroom-container rounded pt-3 p-2"
         >
-            {hasMore && <Button onClick={increaseLimit}>Load more</Button>}
-            <MessageList messages={messages} userName={userName} />
+            <PullToRefresh onRefresh={increaseLimit as () => Promise<any>} canFetchMore={hasMore} pullDownThreshold={5}>
+                <MessageList messages={messages} userName={userName} />
+            </PullToRefresh>
             {isLoggedIn && <InputBar sendMessage={handleSendMessage} />}
             <ErrorToast show={showError} close={() => setShowError(false)} errorMsg={errorMsg} />
         </Container>
