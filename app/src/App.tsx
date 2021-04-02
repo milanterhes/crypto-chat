@@ -22,7 +22,7 @@ function App() {
 
   const [chatroom, setChatroom] = useState<ChatroomState>({
     name: "test",
-    limit: 1
+    limit: 10
   })
 
   return (

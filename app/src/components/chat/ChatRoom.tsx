@@ -6,16 +6,22 @@ import MessageList from "./MessageList"
 import InputBar from "./InputBar"
 import Message from "../../types/message"
 import useUser from "../../hooks/useUser"
+import { sendMessage } from "../../transactions/sendMessage"
 
 interface ChatRoomProps {
     messages: Message[];
     hasMore: boolean;
     increaseLimit: () => void;
+    chatroom: string;
 }
 
-const ChatRoom: FC<ChatRoomProps> = ({ messages, hasMore, increaseLimit }) => {
+const ChatRoom: FC<ChatRoomProps> = ({ messages, hasMore, increaseLimit, chatroom }) => {
 
-    const { isLoggedIn, userName } = useUser();
+    const { isLoggedIn, userName, activerUser } = useUser();
+
+    const handleSendMessage = async (message: string) => {
+        await sendMessage(chatroom, activerUser, message)
+    }
 
     return (
         <Container
@@ -23,7 +29,7 @@ const ChatRoom: FC<ChatRoomProps> = ({ messages, hasMore, increaseLimit }) => {
         >
             {hasMore && <Button onClick={increaseLimit}>Load more</Button>}
             <MessageList messages={messages} userName={userName} />
-            {isLoggedIn && <InputBar />}
+            {isLoggedIn && <InputBar sendMessage={handleSendMessage} />}
         </Container>
     )
 }

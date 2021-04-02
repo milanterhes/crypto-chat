@@ -10,8 +10,6 @@ const useUser = () => {
         throw new Error("useUser must be used within a WalletProvider")
     }
 
-    console.log(ual.activeUser)
-
     useEffect(() => {
         async function setUserName() {
             if (ual.activeUser) {
@@ -26,7 +24,8 @@ const useUser = () => {
 
     return {
         userName,
-        isLoggedIn
+        isLoggedIn,
+        activerUser: ual.activeUser
     }
 }
 

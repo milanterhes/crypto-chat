@@ -54,7 +54,7 @@ const ChatRoomContainer = () => {
     }
 
     return (
-        <ChatRoom messages={msgs} hasMore={hasMore} increaseLimit={increaseLimit} />
+        <ChatRoom messages={msgs} hasMore={hasMore} increaseLimit={increaseLimit} chatroom={chatroomContext?.chatroom.name || ""} />
     )
 }
 
