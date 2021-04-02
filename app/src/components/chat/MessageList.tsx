@@ -9,7 +9,7 @@ interface MessageListProps {
 
 const MessageList: FC<MessageListProps> = ({ messages, userName }) => {
     return (
-        <div className="d-flex flex-column-reverse">
+        <div className="d-flex flex-column-reverse text-white">
             {messages.map(msg => (
                 <ChatMessage {...msg} key={msg.message_id} userName={userName} />
             ))}

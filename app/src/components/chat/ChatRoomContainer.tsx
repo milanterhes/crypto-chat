@@ -36,7 +36,7 @@ const ChatRoomContainer = () => {
             const { name, limit } = chatroomContext.chatroom
             getMessages(rpc, setMsgs, name, limit, setHasMore)
 
-            const intervalId = setInterval(() => getMessages(rpc, setMsgs, name, limit, setHasMore), 2000)
+            const intervalId = setInterval(() => getMessages(rpc, setMsgs, name, limit, setHasMore), 4000)
             return () => {
                 clearInterval(intervalId)
             }

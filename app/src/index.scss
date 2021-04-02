@@ -11,3 +11,11 @@ $wax-orange: #F89022;
     @include button-variant($wax-orange, #222222, $wax-orange, $wax-orange, $wax-orange, $wax-orange);
     color: white;
 }
+
+.top-0 {
+    top: 0;
+}
+
+.right-0 {
+    right: 0;
+}
