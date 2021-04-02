@@ -32,3 +32,4 @@
   - [x] Load more when scrolling up
 - [x] Setup message sending
 - [x] Setup message editing
+- [x] Setup chatroom changing

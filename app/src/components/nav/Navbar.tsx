@@ -10,9 +10,10 @@ interface NavbarProps {
     showModal: () => void;
     userName: string | null;
     logout: () => void;
+    openModal: () => void;
 }
 
-const NavBar: FC<NavbarProps> = ({ isLoggedIn, showModal, userName, logout }) => {
+const NavBar: FC<NavbarProps> = ({ isLoggedIn, showModal, userName, logout, openModal }) => {
 
     const renderLoginButton = () => {
         if (!isLoggedIn) {
@@ -27,6 +28,9 @@ const NavBar: FC<NavbarProps> = ({ isLoggedIn, showModal, userName, logout }) =>
         if (isLoggedIn) {
             return (
                 <Fragment>
+                    <Nav.Item>
+                        <Button variant="link" onClick={openModal}>Change chatroom</Button>
+                    </Nav.Item>
                     <Nav.Item>
                         <Navbar.Text>Hello, {userName}</Navbar.Text>
                     </Nav.Item>
