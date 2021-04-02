@@ -25,7 +25,7 @@ const useUser = () => {
     return {
         userName,
         isLoggedIn,
-        activerUser: ual.activeUser
+        activeUser: ual.activeUser
     }
 }
 

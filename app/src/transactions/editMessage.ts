@@ -1,25 +1,24 @@
-import { SendMessageTransaction } from "./types";
+import { EditMessageTransaction } from "./types";
 
-export const sendMessage = async (
+export const editMessage = async (
     chatroom: string,
     activeUser: any,
-    message: string
+    new_message: string,
+    message_id: number
 ): Promise<any> => {
-
-    const accountName = await activeUser.getAccountName()
 
     const action = {
         account: "chatexample1",
-        name: "sendmessage",
+        name: "editmessage",
         data: {
-            sender: accountName,
             chatroom,
-            message
+            new_message,
+            message_id
         },
     };
     const permission = activeUser.requestPermission
 
-    const transaction: SendMessageTransaction = {
+    const transaction: EditMessageTransaction = {
         actions: [
             {
                 authorization: [
@@ -38,7 +37,7 @@ export const sendMessage = async (
         expireSeconds: 120,
     });
     if (response.status !== "executed") {
-        throw new Error("Sending new message has failed");
+        throw new Error("Editing the message has failed");
     }
     return response;
 };

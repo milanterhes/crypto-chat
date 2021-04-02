@@ -31,4 +31,4 @@
   - [x] Fetch messages every few seconds
   - [ ] Load more when scrolling up
 - [x] Setup message sending
-- [ ] Setup message editing
+- [x] Setup message editing
