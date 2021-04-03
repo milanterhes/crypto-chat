@@ -1,5 +1,4 @@
 import Container from "react-bootstrap/Container"
-import Button from "react-bootstrap/Button"
 import "./ChatRoom.scss"
 import { FC, useState } from "react"
 import MessageList from "./MessageList"
