@@ -38,6 +38,14 @@ const MessageList: FC<MessageListProps> = ({ messages, userName }) => {
         }
     }
 
+    if(messages.length === 0) {
+        return (
+            <div className="d-flex flex-column-reverse">
+                <p className="text-white">This chat room is empty.</p>
+            </div>
+        )
+    }
+
     return (
         <div className="d-flex flex-column-reverse">
             {messages.map(msg => (

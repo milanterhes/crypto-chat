@@ -29,9 +29,6 @@ const NavBar: FC<NavbarProps> = ({ isLoggedIn, showModal, userName, logout, open
             return (
                 <Fragment>
                     <Nav.Item>
-                        <Button variant="link" onClick={openModal}>Change chatroom</Button>
-                    </Nav.Item>
-                    <Nav.Item>
                         <Navbar.Text>Hello, {userName}</Navbar.Text>
                     </Nav.Item>
                     <Nav.Item>
@@ -57,6 +54,9 @@ const NavBar: FC<NavbarProps> = ({ isLoggedIn, showModal, userName, logout, open
                 <Navbar.Toggle />
                 <Navbar.Collapse>
                     <Nav className="ml-auto">
+                        <Nav.Item>
+                            <Button variant="link" onClick={openModal}>Change chatroom</Button>
+                        </Nav.Item>
                         {renderLoginButton()}
                         {renderUserInfo()}
                     </Nav>
